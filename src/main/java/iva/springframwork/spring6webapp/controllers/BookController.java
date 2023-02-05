@@ -4,6 +4,7 @@ import iva.springframwork.spring6webapp.services.BookService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created By iVa on 2/4/2023.
@@ -20,7 +21,9 @@ public class BookController {
 
     @RequestMapping("/books")
     public String getBooks(Model model){
-        model.addAttribute("books",bookService.finaAll());
+
+        model.addAttribute("books", bookService.findAll());
+
 
         return "books";
     }

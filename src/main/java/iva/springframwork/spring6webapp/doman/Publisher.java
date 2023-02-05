@@ -89,11 +89,11 @@ public class Publisher {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Publisher)) return false;
 
-        Publisher author = (Publisher) o;
+        Publisher publisher = (Publisher) o;
 
-        return Objects.equals(id, author.id);
+        return id != null ? id.equals(publisher.id) : publisher.id == null;
     }
 
     @Override

@@ -18,7 +18,7 @@ public class BookServiceImpl implements BookService {
 
 
     @Override
-    public Iterable<Book> finaAll() {
+    public Iterable<Book> findAll() {
         return bookRepository.findAll();
     }
 }
