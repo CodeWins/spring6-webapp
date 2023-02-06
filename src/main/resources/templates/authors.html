@@ -6,17 +6,18 @@
 </head>
 <body>
 <h1>Authors List</h1>
-<table>
+<table >
     <tr>
         <th>ID</th>
         <th>First Name</th>
         <th>Last Name</th>
     </tr>
     <tr th:each="author : ${authors}">
-        <td th:text="${authors.id}">123</td>
-        <td th:text="${authors.firstName}"> Spring in Action</td>
-        <td th:text="${authors.lastName}">Wrox</td>
+        <td th:text="${author.id}">123</td>
+        <td th:text="${author.firstName}"> Spring in Action</td>
+        <td th:text="${author.lastName}">Wrox</td>
     </tr>
+
 </table>
 </body>
 </html>
